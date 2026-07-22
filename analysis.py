@@ -1,7 +1,15 @@
 #LOAD DATASET
+import os
 import pandas as pd
 
-df = pd.read_csv("student_habits_analysis/student_habits_analysis.csv")
+#----------LOAD DATASET------------
+data_path = os.path.join(
+    os.path.dirname(__file__),
+    "data",
+    "student_habits_analysis.csv"
+)  
+  
+df = pd.read_csv(data_path)
 print(df)
 print("Dataset Shape:")
 print(df.shape)
